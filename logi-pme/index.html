@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGI-PME</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+    <div class="logo-icon">
+      <i class="fa-solid fa-cube"></i>
+    </div>
+
+    <h2>LOGI-PME</h2>
+  </div>
+
+  <div class="nav-buttons">
+
+    <button class="btn-light">
+      S'inscrire
+    </button>
+
+    <a href="https://accounts.google.com/signin"
+    class="btn-primary google-btn">
+
+      <i class="fa-brands fa-google"></i>
+      Connexion
+
+    </a>
+
+  </div>
+
+</header>
+
+<section class="dashboard">
+
+  <h1>Tableau de Bord</h1>
+
+  <div class="stats-grid">
+
+    <div class="card blue">
+
+      <div>
+        <h3>Demandes en cours</h3>
+        <span>3</span>
+      </div>
+
+      <div class="card-icons">
+        <i class="fa-solid fa-truck"></i>
+        <i class="fa-solid fa-box"></i>
+        <i class="fa-solid fa-warehouse"></i>
+      </div>
+
+    </div>
+
+    <div class="card lightblue">
+
+      <div>
+        <h3>Transports Réservés</h3>
+        <span>2</span>
+      </div>
+
+      <div class="card-icons">
+        <i class="fa-solid fa-truck-moving"></i>
+      </div>
+
+    </div>
+
+    <div class="card orange">
+
+      <div>
+        <h3>Espaces d'entrepôt</h3>
+        <span>1</span>
+      </div>
+
+      <div class="card-icons">
+        <i class="fa-solid fa-warehouse"></i>
+      </div>
+
+    </div>
+
+    <div class="card green">
+
+      <div>
+        <h3>Dépôts Disponible</h3>
+        <span>500 000 FCFA</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section-box">
+
+  <div class="section-title">
+    <h2>Mes Demandes Actuelles</h2>
+  </div>
+
+  <div class="request-item">
+
+    <p>Livraison de matières premières</p>
+
+    <button>
+      Voir détails
+    </button>
+
+  </div>
+
+  <div class="request-item">
+
+    <p>Besoin d'un entrepôt temporaire</p>
+
+    <button>
+      Voir détails
+    </button>
+
+  </div>
+
+</section>
+
+<section class="section-box">
+
+  <div class="section-title">
+    <h2>Propositions de Services</h2>
+  </div>
+
+  <div class="service-item">
+
+    <div class="service-left">
+
+      <i class="fa-solid fa-building"></i>
+
+      <p>Nouveau Dépôt Disponible</p>
+
+    </div>
+
+    <button id="openDepot">
+      Voir
+    </button>
+
+  </div>
+
+  <div class="service-item">
+
+    <div class="service-left">
+
+      <i class="fa-solid fa-truck-fast"></i>
+
+      <p>Transport Rapide Express</p>
+
+    </div>
+
+    <button id="openTransport">
+      Réserver
+    </button>
+
+  </div>
+
+  <div class="service-item">
+
+    <div class="service-left">
+
+      <i class="fa-solid fa-money-bill"></i>
+
+      <p>Solutions Financières Cameroun</p>
+
+    </div>
+
+    <button id="openFinance">
+      Voir Détails
+    </button>
+
+  </div>
+
+</section>
+
+<section class="search-section">
+
+  <div class="search-top">
+
+    <h1>Recherche de Solutions</h1>
+
+    <button class="btn-primary" id="searchButton">
+      Rechercher
+    </button>
+
+  </div>
+
+  <div class="filters">
+
+    <div class="input-box">
+
+      <label>Type de Besoin</label>
+
+      <select id="typeSelect">
+
+        <option>Textile</option>
+        <option>Transport</option>
+        <option>Stockage</option>
+        <option>Financement</option>
+
+      </select>
+
+    </div>
+
+    <div class="input-box">
+
+      <label>Zone de Livraison</label>
+
+      <select id="zoneSelect">
+
+        <option>Douala</option>
+        <option>Yaoundé</option>
+        <option>Bafoussam</option>
+        <option>Kribi</option>
+
+      </select>
+
+    </div>
+
+    <div class="input-box">
+
+      <label>Date Souhaitée</label>
+
+      <input type="date">
+
+    </div>
+
+  </div>
+
+  <div class="result-card">
+
+    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop">
+
+    <div class="result-content">
+
+      <h2>Entrepôt Littoral Logistique</h2>
+
+      <p>
+        Stockage sécurisé, espace disponible: 500 m²
+      </p>
+
+      <div class="result-icons">
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+
+    </div>
+
+    <button id="warehouseReserve">
+      Réserver
+    </button>
+
+  </div>
+
+  <div class="result-card">
+
+    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1200&auto=format&fit=crop">
+
+    <div class="result-content">
+
+      <h2>Transcam Transport</h2>
+
+      <p>
+        Camion 20 tonnes disponible, zone Douala-Bassa
+      </p>
+
+      <div class="result-icons">
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+
+    </div>
+
+    <button id="transcamButton">
+      Sélectionner
+    </button>
+
+  </div>
+
+  <div class="result-card">
+
+    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop">
+
+    <div class="result-content">
+
+      <h2>FINABANK Crédit PME</h2>
+
+      <p>
+        Financement rapide, taux à partir de 5%
+      </p>
+
+      <div class="result-icons">
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+
+    </div>
+
+    <button id="finabankButton">
+      Voir Détails
+    </button>
+
+  </div>
+
+</section>
+
+<!-- MODAL DEPOTS -->
+
+<div class="modal" id="depotModal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal('depotModal')">
+      &times;
+    </span>
+
+    <h2>Nouveaux Dépôts Disponibles</h2>
+
+    <div class="depot-grid">
+
+      <div class="depot-card">
+
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop">
+
+        <h3>Dépôt Douala</h3>
+
+        <p>
+          Espace moderne et sécurisé pour PME.
+        </p>
+
+      </div>
+
+      <div class="depot-card">
+
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop">
+
+        <h3>Dépôt Yaoundé</h3>
+
+        <p>
+          Entrepôt intelligent avec surveillance.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- MODAL TRANSPORT -->
+
+<div class="modal" id="transportModal">
+
+  <div class="modal-content">
+
+    <span class="close"
+    onclick="closeModal('transportModal')">
+      &times;
+    </span>
+
+    <h2>Réservation Transport</h2>
+
+    <form id="transportForm" class="transport-form">
+
+      <input type="text"
+      placeholder="Nom complet" required>
+
+      <input type="text"
+      placeholder="Ville de départ" required>
+
+      <input type="text"
+      placeholder="Ville d'arrivée" required>
+
+      <input type="date" required>
+
+      <select required>
+
+        <option>Choisir transport</option>
+        <option>Camion 20 tonnes</option>
+        <option>Camion frigorifique</option>
+        <option>Mini camion</option>
+        <option>Transport express</option>
+
+      </select>
+
+      <button type="submit">
+        Confirmer Réservation
+      </button>
+
+    </form>
+
+    <div class="transport-images">
+
+      <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- MODAL FINANCE -->
+
+<div class="modal" id="financeModal">
+
+  <div class="modal-content">
+
+    <span class="close"
+    onclick="closeModal('financeModal')">
+      &times;
+    </span>
+
+    <h2>Solutions Financières Cameroun</h2>
+
+    <p class="finance-text">
+
+      Nous aidons les PME camerounaises à obtenir
+      des financements rapides, crédits PME,
+      solutions Mobile Money et aides logistiques.
+
+    </p>
+
+    <ul class="finance-list">
+
+      <li>Crédit PME rapide</li>
+      <li>Financement logistique</li>
+      <li>Assurance transport</li>
+      <li>Paiements digitaux</li>
+      <li>Investissement PME</li>
+
+    </ul>
+
+  </div>
+
+</div>
+
+<script src="java.js"></script>
+
+</body>
+</html>
